@@ -7,10 +7,32 @@
     <link rel="stylesheet" href="./src/output.css">
 </head>
 <body class="m-0 p-0 box-border">
-    
+
     <!-- Header section -->
-    <header>
+    <header class="px-[24px] py-[20px] flex justify-between border-b-1 border-[#808080]">
+
+        <!-- Logo -->
+        <div class="flex gap-[5px] items-center">
+            <img class="h-[24px] items-center" src="./assets/icon/dev.svg" alt="dev icon">
+            <h2 class="font-semibold text-white">DevPortofolio</h1>
+        </div>
         
+        <!-- Nav -->
+        <ul class="hidden md:flex items-center gap-[24px] text-white">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Project</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+
+        <button class="hidden md:flex px-[12px] py-[8px] rounded-xl bg-gradient-to-r from-[#3883f6] to-[#8B5CF6] text-white">
+            <p>Contact Me</p>
+        </button>
+
+        <button class="md:hidden">
+            <img class="h-[24px]" src="./assets/icon/burger-bar.svg" alt="">
+        </button>
+
     </header>
 
     <main>

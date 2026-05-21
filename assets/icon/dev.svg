@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <g fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Greater Than Symbol (>) -->
+    <path d="M 25,25 L 50,50 L 25,75" />
+    
+    <!-- Static Underscore Cursor (_) -->
+    <line x1="60" y1="75" x2="80" y2="75" />
+  </g>
+</svg>
