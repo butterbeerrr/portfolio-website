@@ -555,6 +555,9 @@
   .text-\[20px\] {
     font-size: 20px;
   }
+  .text-\[32px\] {
+    font-size: 32px;
+  }
   .leading-\[1\.6\] {
     --tw-leading: 1.6;
     line-height: 1.6;
