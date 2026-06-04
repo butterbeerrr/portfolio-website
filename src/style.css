@@ -62,3 +62,12 @@
     backdrop-filter: blur(10px);
   }
 }
+
+@keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+    }
+
+    .float-icon {
+        animation: float 3s ease-in-out infinite;
+    }
