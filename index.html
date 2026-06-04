@@ -6,278 +6,558 @@
     <title>Portofolio</title>
     <link rel="stylesheet" href="./src/output.css">
 </head>
-<body class="m-0 p-0 box-border">
+<script src="./assets/js/script.js"></script>
+<body class="m-0 p-0 box-border bg-slate-950 text-white font-poppins overflow-x-hidden">
 
     <!-- Header section -->
-    <header class="px-[24px] py-[20px] flex justify-between border-b-1 border-[#808080]">
-
+    <header class="fixed top-0 left-0 right-0 z-50 px-6 md:px-[52px] py-4 flex items-center justify-between bg-bg-primary/85 backdrop-blur-md border-b border-border-primary">
+    
         <!-- Logo -->
-        <div class="flex gap-[5px] items-center">
-            <img class="h-[24px] items-center" src="./assets/icon/dev.svg" alt="dev icon">
-            <h2 class="font-semibold text-white">DevPortofolio</h1>
+        <a href="#home" class="flex items-center gap-2 font-bold text-sm text-text-primary">
+            <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-xs text-white">
+                ✦
+            </div>
+            <span>DevPortfolio</span>
+        </a>
+
+        <!-- Nav Desktop -->
+        <nav class="hidden md:flex items-center gap-8">
+            <a href="#home" class="text-sm font-medium text-text-muted hover:text-text-primary">
+                Home
+            </a>
+            <a href="#about" class="text-sm font-medium text-text-muted hover:text-text-primary">
+                About
+            </a>
+            <a href="#projects" class="text-sm font-medium text-text-muted hover:text-text-primary ">
+                Projects
+            </a>
+            <a href="#contact" class="text-sm font-medium text-text-muted hover:text-text-primary">
+                Contact
+            </a>
+        </nav>
+
+        <!-- Button Desktop -->
+        <a href="#contact" class="hidden md:block px-6 py-2 rounded-button bg-gradient-to-r from-primary to-secondary text-sm font-semibold text-white hover:opacity-90">
+            Contact Me
+        </a>
+
+        <!-- Hamburger Mobile -->
+        <button id="hamburgerBtn"
+            class="md:hidden flex flex-col gap-1.5 cursor-pointer">
+            <span class="w-6 h-0.5 bg-white rounded"></span>
+            <span class="w-6 h-0.5 bg-white rounded"></span>
+            <span class="w-6 h-0.5 bg-white rounded"></span>
+        </button>
+
+        <!-- Mobile Nav -->
+        <div id="mobileNav" class="hidden fixed inset-0 z-40 bg-bg-primary/95 backdrop-blur-md flex flex-col items-center justify-center gap-10 md:hidden">
+
+            <button id="closeNavBtn" class="absolute top-6 right-6 text-2xl text-white cursor-pointer">
+                ✕
+            </button>
+
+            <a href="#home" class="mobile-link text-2xl font-bold text-text-primary">Home</a>
+            <a href="#about" class="mobile-link text-2xl font-bold text-text-primary">About</a>
+            <a href="#projects" class="mobile-link text-2xl font-bold text-text-primary">Projects</a>
+            <a href="#contact" class="mobile-link text-2xl font-bold text-text-primary">Contact</a>
+
         </div>
-        
-        <!-- Nav -->
-        <ul class="hidden md:flex items-center gap-[24px] text-white">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Project</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-
-        <button class="hidden md:flex px-[12px] py-[8px] rounded-xl bg-gradient-to-r from-[#3883f6] to-[#8B5CF6] text-white">
-            <p>Contact Me</p>
-        </button>
-
-        <button class="md:hidden">
-            <img class="h-[24px]" src="./assets/icon/burger-bar.svg" alt="">
-        </button>
 
     </header>
 
     <main>
         <!-- Home section -->
-        <section class="mx-[52px] h-screen flex flex-col justify-center gap-5">
+        <section id="home" class="relative min-h-screen px-6 md:px-[52px] py-28 md:py-0 flex flex-col md:flex-row items-center justify-center md:justify-between gap-10 overflow-hidden bg-grid">
 
-            <!-- Text -->
-            <div class="flex flex-col gap-5">
-                <p class="inline-block px-4 py-2 bg-[#031420] border border-[#0F243A] text-blue-100 rounded-full w-fit">👋 Hi, I'm</p>
-                <h1 class="text-5xl font-bold text-white">Ratu Annisa Larassati</h1>
-                <h1 class="pb-2 text-5xl font-bold bg-gradient-to-r from-[#3883f6] to-[#8B5CF6] bg-clip-text text-transparent">Software Engineering</h1>
-                <p class="text-[rgba(255,255,255,0.7)]">I build scalable, efficient, and user-friendly web applications with modern technologies.</p>
-            </div>
+            <!-- Background -->
+            <div class="bg-glow right-0 top-[120px] md:right-[180px]"></div>
 
-            <!-- Button -->
-            <div class="py-5 flex gap-4">
-                <a href="" class="m-y-[10px] flex px-[12px] py-[8px] rounded-xl bg-gradient-to-r from-[#3883f6] to-[#8B5CF6] text-white">View Project</a>
-                <a href="" class="flex px-[12px] py-[8px] border border-[#808080] rounded-xl text-white">Contact Me</a>
-            </div>
+            <!-- Left Content -->
+            <div class="relative z-10 w-full max-w-2xl flex flex-col gap-5 text-center md:text-left">
 
-            <div class="mt-[48px] flex flex-col gap-5">
-                <p class="text-[rgba(255,255,255,0.5)] ">TECH STACK</p>
-                <ul class="flex flex-row gap-5 overflow-x-auto py-2">
-                    <li class="flex-shrink-0"><img class="h-[58px] w-auto" src="./assets/icon/html.svg" alt="html logo"></li>
-                    <li class="flex-shrink-0"><img class="h-[58px] w-auto" src="./assets/icon/js.svg" alt="javascript logo"></li>
-                    <li class="flex-shrink-0"><img class="h-[58px] w-auto" src="./assets/icon/java.svg" alt="java logo"></li>
-                    <li class="flex-shrink-0"><img class="h-[58px] w-auto" src="./assets/icon/c-plus.svg" alt="C++ logo"></li>
-                    <li class="flex-shrink-0"><img class="h-[58px] w-auto" src="./assets/icon/c.svg" alt="C logo"></li>
-                </ul>
-            </div>
-    
-        </section>
+                <div class="mx-auto md:mx-0 w-fit px-5 py-3 rounded-full border border-border-primary bg-bg-secondary">
+                    <p class="text-text-secondary">👋 Hi, I'm</p>
+                </div>
 
-        <!-- About section -->
-        <section class="m-[52px] flex flex-col gap-8">
-
-            <!-- Title -->
-            <h2 class="text-[32px] font-bold text-white">About Me</h2>
-
-            <!-- Main Layout -->
-            <div class="flex flex-col xl:flex-row gap-8">
-
-                <!-- first main -->
-                <div class="flex flex-col md:flex-row gap-8">
-
-                    <!-- About -->
-                    <div class="flex-1 md:border-r border-[rgba(255,255,255,0.2)] md:pr-8">
-
-                        <p class="text-[rgba(255,255,255,0.55)] text-base text-justify">
-                            I'm a passionate Software Engineer with a strong focus on building modern web applications and solving real-world problems. I enjoy learning new technologies and turning ideas into impactful digital products.
-                        </p>
-
-                        <!-- Info -->
-                        <div class="hidden md:flex flex-col gap-3 mt-5">
-
-                            <div class="flex gap-4">
-                                <p class="text-white text-base font-semibold">Name :</p>
-                                <p class="text-[rgba(255,255,255,0.55)] text-base">
-                                    Ratu Annisa Larassati
-                                </p>
-                            </div>
-
-                            <div class="flex gap-4">
-                                <p class="text-white text-base font-semibold">Email :</p>
-                                <p class="text-[rgba(255,255,255,0.55)] text-base">
-                                    ranisa300105@gmail.com
-                                </p>
-                            </div>
-
-                            <div class="flex gap-4">
-                                <p class="text-white font-semibold text-base">Location :</p>
-                                <p class="text-[rgba(255,255,255,0.55)] text-base">
-                                    Shandong, China
-                                </p>
-                            </div>
-
+                <!-- Mobile Profile -->
+                <div class="relative z-10 flex justify-center md:hidden my-4">
+                    <div class="relative">
+                        <div class="w-[230px] h-[230px] md:w-[320px] md:h-[320px] rounded-full border-4 border-primary bg-bg-card flex items-center justify-center shadow-glow">
+                            <img src="./assets/image/profile.png" alt="Profile" class="w-[130px] md:w-[190px]">
                         </div>
 
-                        <!-- Button -->
-                        <button class="mx-auto mt-10 px-10 py-4 rounded-2xl bg-gradient-to-r from-[#4F7CF7] to-[#9B5CF6] text-white text-base">
-                            Download CV
-                        </button>
+                        <div class="absolute top-[30px] -left-4 md:top-[50px] w-10 h-10 rounded-full card-glass flex items-center justify-center text-lg">
+                            🎨
+                        </div>
 
+                        <div class="absolute bottom-[35px] -left-4 md:bottom-[50px] w-10 h-10 rounded-full card-glass flex items-center justify-center text-lg">
+                            🚀
+                        </div>
+
+                        <div class="absolute top-[10px] right-0 w-10 h-10 rounded-full card-glass flex items-center justify-center text-lg">
+                            💻
+                        </div>
+
+                        <div class="absolute bottom-[20px] right-0 w-10 h-10 rounded-full card-glass flex items-center justify-center text-lg">
+                            ⚡
+                        </div>
                     </div>
-
-                    <!-- Skills -->
-                    <div class="flex-1">
-
-                        <h3 class="text-2xl font-bold text-white mb-5">
-                            Skills
-                        </h3>
-
-                        <ul>
-                            <li  class="">
-                                <p class="text-white text-base">Considering what to write?</p>
-                            </li>
-                        </ul>
-
-
-                    </div>
-
                 </div>
 
-                <!-- Bottom -->
-                <div class="flex flex-col md:flex-row gap-8">
-
-                    <!-- Experience -->
-                    <div class="flex-1 md:p-10 md:border rounded-3xl border-[rgba(255,255,255,0.08)] md:bg-[rgba(255,255,255,0.02)]">
-
-                        <h3 class="text-xl font-bold text-white mb-8">
-                            Experience
-                        </h3>
-
-                        <ul class="list-disc text-base pl-6 text-[rgba(255,255,255,0.55)]">
-                            <li>No experience yet</li>
-                        </ul>
-
-                    </div>
-
-                    <!-- Education -->
-                    <div class="flex-1 md:p-10 md:border rounded-3xl border-[rgba(255,255,255,0.08)] md:bg-[rgba(255,255,255,0.02)]">
-                        <h3 class="text-xl font-bold text-white mb-8">Education</h3>
-                        <ul class="list-disc pl-6 text-base text-[rgba(255,255,255,0.55)]">
-                            <li>
-                                <p class="text-[rgba(255,255,255,0.45)]">2024 - Present</p>
-                                <p class="text-white font-semibold mt-1">Software Engineering</p> 
-                                <p class="text-[rgba(255,255,255,0.55)] mt-1">Shandong University of Science and Technology</p>
-                            </li>
-                        </ul>
-                    </div>
-
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold text-text-primary leading-tight">
+                        Ratu Annisa Larassati
+                    </h1>
                 </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Software Engineering
+                </h2>
+
+                <p class="text-base md:text-xl text-text-muted max-w-[520px] leading-relaxed mx-auto md:mx-0">
+                    I build scalable, efficient, and user-friendly web applications with modern technologies.
+                </p>
+
+                <!-- Button -->
+                <div class="flex flex-col md:flex-row gap-4 mt-4 justify-center md:justify-start">
+                    <a href="#projects" class="px-8 py-4 rounded-button bg-gradient-to-r from-primary to-secondary text-white font-semibold text-center">
+                        View Projects
+                    </a>
+
+                    <a href="#contact" class="px-8 py-4 rounded-button border border-border-primary text-white font-semibold hover:border-border-hover text-center">
+                        Contact Me
+                    </a>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="mt-8 md:mt-12">
+                    <p class="text-text-muted tracking-[4px] font-semibold text-sm">
+                        TECH STACK
+                    </p>
+
+                    <ul class="flex flex-row gap-5 overflow-x-auto py-2 justify-center md:justify-start">
+                        <li class="flex-shrink-0">
+                            <img class="h-[54px] w-auto" src="./assets/icon/html.svg" alt="html logo">
+                        </li>
+                        <li class="flex-shrink-0">
+                            <img class="h-[54px] w-auto" src="./assets/icon/js.svg" alt="javascript logo">
+                        </li>
+                        <li class="flex-shrink-0">
+                            <img class="h-[54px] w-auto" src="./assets/icon/java.svg" alt="java logo">
+                        </li>
+                        <li class="flex-shrink-0">
+                            <img class="h-[54px] w-auto" src="./assets/icon/c-plus.svg" alt="C++ logo">
+                        </li>
+                        <li class="flex-shrink-0">
+                            <img class="h-[54px] w-auto" src="./assets/icon/c.svg" alt="C logo">
+                        </li>
+                    </ul>
+                </div>
+
             </div>
+
+            <!-- Desktop Profile -->
+            <div class="relative z-10 hidden md:flex">
+
+                <div class="w-[450px] h-[450px] rounded-full border-4 border-primary bg-bg-card flex items-center justify-center shadow-glow">
+                    <img src="./assets/image/profile.png" alt="Profile" class="w-[240px]">
+                </div>
+
+                <div class="absolute top-[70px] -left-6 w-14 h-14 rounded-full card-glass flex items-center justify-center text-2xl">
+                    🎨
+                </div>
+
+                <div class="absolute bottom-[70px] -left-6 w-14 h-14 rounded-full card-glass flex items-center justify-center text-2xl">
+                    🚀
+                </div>
+
+                <div class="absolute top-[30px] right-0 w-14 h-14 rounded-full card-glass flex items-center justify-center text-2xl">
+                    💻
+                </div>
+
+                <div class="absolute bottom-[50px] right-0 w-14 h-14 rounded-full card-glass flex items-center justify-center text-2xl">
+                    ⚡
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="px-6 md:px-[52px] py-16 md:py-20">
+
+            <!-- Title -->
+            <div class="mb-12 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white">
+                    About Me
+                </h2>
+
+                <p class="mt-4 text-text-muted max-w-2xl mx-auto">
+                    Passionate about technology, problem solving, and creating digital experiences.
+                </p>
+            </div>
+
+            <!-- Content -->
+            <!-- Content -->
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- Who Am I -->
+                <div class="card-glass rounded-card p-8">
+
+                    <h3 class="text-2xl font-bold text-white mb-6">
+                        Who Am I?
+                    </h3>
+
+                    <p class="text-text-muted leading-relaxed mb-5">
+                        I'm Ratu Annisa Larassati, a Software Engineering student at
+                        Shandong University of Science and Technology, China.
+                    </p>
+
+                    <p class="text-text-muted leading-relaxed">
+                        Passionate about technology and continuously learning new skills in
+                        software development. I enjoy solving problems, collaborating with
+                        teams, and building practical digital solutions.
+                    </p>
+
+                </div>
+
+                <!-- Education -->
+                <div class="card-glass rounded-card p-8">
+
+                    <h3 class="text-2xl font-bold text-white mb-6">
+                        Education
+                    </h3>
+
+                    <p class="text-primary text-sm">
+                        2024 - Present
+                    </p>
+
+                    <h4 class="text-white font-semibold mt-2">
+                        Bachelor of Software Engineering
+                    </h4>
+
+                    <p class="text-text-muted">
+                        Shandong University of Science and Technology
+                    </p>
+
+                </div>
+
+                <!-- Interests -->
+                <div class="card-glass rounded-card p-8">
+
+                    <h3 class="text-2xl font-bold text-white mb-6">
+                        Interests
+                    </h3>
+
+                    <ul class="space-y-3 text-text-muted">
+                        <li>💻 Web Development</li>
+                        <li>⚙️ Software Engineering</li>
+                        <li>🌐 Networking</li>
+                        <li>🔒 Cyber Security</li>
+                    </ul>
+
+                </div>
+
+                <!-- Organization -->
+                <div class="card-glass rounded-card p-8">
+
+                    <h3 class="text-2xl font-bold text-white mb-6">
+                        Organization
+                    </h3>
+
+                    <p class="text-primary text-sm">
+                        2025 - Present
+                    </p>
+
+                    <h4 class="text-white font-semibold mt-2">
+                        K2 Member — PPIT Shandong
+                    </h4>
+
+                    <p class="text-text-muted mt-2">
+                        Participated in competition division activities, event coordination,
+                        fundraising programs, and organizational operations.
+                    </p>
+
+                </div>
+
+            </div>
+
         </section>
 
         <!-- Project section -->
-        <section class="m-[52px]">
-            <!-- Tittle -->
-            <h2 class="text-white text-[32px] font-bold">My Projects</h2>
+        <section id="projects" class="px-6 md:px-[52px] py-16 md:py-20">
 
-            <!-- Card -->
-            <div class="my-5 flex flex-row gap-8">
-                <div class="flex flex-col gap-4 border-1 p-5 rounded-2xl  border-[rgba(255,255,255,0.08)] w-[320px]">
-                    <img src="" alt="">
-                    <p class="text-white text-base font-semibold">Project 1</p>
-                    <p class="text-[rgba(255,255,255,0.55)] text-base">description</p>
-                    <ul class="flex flex-row gap-3">
-                        <li class="px-3 rounded-2xl bg-[rgba(255,255,255,0.04)]">
-                            <p class="text-white text-sm">html</p>
-                        </li>
-                        <li class="px-3 rounded-2xl bg-[rgba(255,255,255,0.04)]">
-                            <p class="text-white text-sm">css</p>
-                        </li>
-                    </ul>
-                    <div class="flex flex-row gap-3">
-                        <button class="flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-[rgba(255,255,255,0.08)]">
-                            <img class="h-[24px]" src="./assets/icon/github.svg" alt="GitHub Logo">
-                            <p class="text-white text-sm">GitHub</p>
-                        </button>
-                        <button class="flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-[rgba(255,255,255,0.08)]">
-                            <img class="h-[24px] px-2" src="./assets/icon/website.svg" alt="website logo">
-                            <p class="text-white text-sm">Live Demo</p>
-                        </button>
+            <!-- Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-white">
+                    My Projects
+                </h2>
+
+                <p class="mt-4 text-text-muted max-w-2xl mx-auto">
+                    Projects that showcase my skills in web development and database systems.
+                </p>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- LMS Database -->
+                <div class="card-glass rounded-card overflow-hidden">
+
+                    <!-- Project Image -->
+                    <div class="h-56 bg-bg-secondary flex items-center justify-center">
+                        <span class="text-6xl">🗄️</span>
+                    </div>
+
+                    <div class="p-6">
+
+                        <h3 class="text-2xl font-bold text-white">
+                            LMS Database System
+                        </h3>
+
+                        <p class="text-text-muted mt-3">
+                            Designed and implemented a Learning Management System database
+                            including ERD design, table relationships, normalization,
+                            indexing, and SQL queries.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <span class="px-3 py-1 rounded-full bg-bg-secondary text-sm text-text-muted">
+                                SQL
+                            </span>
+
+                            <span class="px-3 py-1 rounded-full bg-bg-secondary text-sm text-text-muted">
+                                Database Design
+                            </span>
+
+                            <span class="px-3 py-1 rounded-full bg-bg-secondary text-sm text-text-muted">
+                                ERD
+                            </span>
+                        </div>
+
+                        <div class="flex gap-3 mt-6">
+                            <a href="#"
+                            class="px-5 py-3 rounded-xl border border-border-primary text-white">
+                                GitHub
+                            </a>
+                        </div>
+
                     </div>
                 </div>
+
+                <!-- Product Website -->
+                <div class="card-glass rounded-card overflow-hidden">
+
+                    <!-- Project Image -->
+                    <div class="h-56 bg-bg-secondary flex items-center justify-center">
+                        <span class="text-6xl">🌐</span>
+                    </div>
+
+                    <div class="p-6">
+
+                        <h3 class="text-2xl font-bold text-white">
+                            Product Website
+                        </h3>
+
+                        <p class="text-text-muted mt-3">
+                            Responsive product landing page built with modern web
+                            technologies focusing on user experience, responsive layouts,
+                            and clean design.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <span class="px-3 py-1 rounded-full bg-bg-secondary text-sm text-text-muted">
+                                HTML
+                            </span>
+
+                            <span class="px-3 py-1 rounded-full bg-bg-secondary text-sm text-text-muted">
+                                Tailwind CSS
+                            </span>
+
+                            <span class="px-3 py-1 rounded-full bg-bg-secondary text-sm text-text-muted">
+                                JavaScript
+                            </span>
+                        </div>
+
+                        <div class="flex gap-3 mt-6">
+                            <a href="#"
+                            class="px-5 py-3 rounded-xl border border-border-primary text-white">
+                                GitHub
+                            </a>
+
+                            <a href="#"
+                            class="px-5 py-3 rounded-xl bg-gradient-to-r from-primary to-secondary text-white">
+                                Live Demo
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
+
         </section>
 
         <!-- Contact section -->
-        <section class="m-[52px]">
-            <h2 class="text-white text-[32px] font-bold">Let's Work Together</h2>
-            
-            <div class="flex gap-12 flex-col pt-[24px] md:flex-row ">
+       <section id="contact" class="px-6 md:px-[52px] py-16 md:py-20">">
 
-                <!-- Contact -->
-                <div class="flex flex-col gap-6 md:w-1/2 md:border-r border-[rgba(255,255,255,0.2)] pr-4">
-                    <div>
-                        <p class="text-[rgba(255,255,255,0.55)] text-base">Have a project in mind or want to collaborate?</p>
-                        <p class="text-[rgba(255,255,255,0.55)] text-base">Feel free to reach Out!</p>
+            <!-- Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-white">
+                    Let's Work Together
+                </h2>
+
+                <p class="mt-4 text-text-muted max-w-2xl mx-auto">
+                    Feel free to reach out if you'd like to collaborate,
+                    discuss a project, or simply connect.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+
+                <!-- Contact Information -->
+                <div class="card-glass rounded-card p-8">
+
+                    <h3 class="text-2xl font-bold text-white mb-8">
+                        Contact Information
+                    </h3>
+
+                    <div class="space-y-6">
+
+                        <div>
+                            <p class="text-primary font-semibold">
+                                Email
+                            </p>
+
+                            <p class="text-text-muted mt-1">
+                                ranisa300105@gmail.com
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-primary font-semibold">
+                                Location
+                            </p>
+
+                            <p class="text-text-muted mt-1">
+                                Shandong, China
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-primary font-semibold">
+                                Education
+                            </p>
+
+                            <p class="text-text-muted mt-1">
+                                Software Engineering Student at SDUST
+                            </p>
+                        </div>
+
                     </div>
 
-                    <div class="flex items-center gap-3">
-                        <img class="w-[24px]" src="./assets/icon/email.png" alt="Mail Logo">
-                        <p class="text-[rgba(255,255,255,0.55)] text-base">ranisa300105@gmail.com</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <img class="h-[24px]" src="./assets/icon/phone.png" alt="Phone Logo">
-                        <p class="text-[rgba(255,255,255,0.55)] text-base">+86 193-9817-5130</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <img class="h-[24px]" src="./assets/icon/location.png" alt="Location Logo">
-                        <p class="text-[rgba(255,255,255,0.55)] text-base">Shandong, China</p>
+                    <!-- Social -->
+                    <div class="mt-10">
+
+                        <p class="text-white font-semibold mb-4">
+                            Connect With Me
+                        </p>
+
+                        <div class="flex gap-4">
+
+                            <a href="#"
+                                class="w-12 h-12 rounded-full card-glass flex items-center justify-center hover:scale-105 transition">
+                                <img class="h-5" src="./assets/icon/github.svg" alt="GitHub">
+                            </a>
+
+                            <a href="#"
+                                class="w-12 h-12 rounded-full card-glass flex items-center justify-center hover:scale-105 transition">
+                                <img class="h-5" src="./assets/icon/linkedin.svg" alt="LinkedIn">
+                            </a>
+
+                            <a href="#"
+                                class="w-12 h-12 rounded-full card-glass flex items-center justify-center hover:scale-105 transition">
+                                <img class="h-5" src="./assets/icon/instagram.svg" alt="Instagram">
+                            </a>
+
+                        </div>
+
                     </div>
 
-                    <div class="flex flex-row gap-4">
-                        <div class="w-8 h-8 rounded-full border border-[rgba(255,255,255,0.55)] flex items-center justify-center">
-                            <img class="h-[14px]" src="./assets/icon/github.svg" alt="github">
-                        </div>
-                        <div class="w-8 h-8 rounded-full border border-[rgba(255,255,255,0.55)] flex items-center justify-center">
-                            <img class="h-[16px]" src="./assets/icon/linkedin.svg" alt="linked.in">
-                        </div>
-                        <div class="w-8 h-8 rounded-full border border-[rgba(255,255,255,0.55)] flex items-center justify-center">
-                            <img class="h-[14px]" src="./assets/icon/instagram.svg" alt="instagram">
-                        </div>
-                    </div>
                 </div>
 
-                <div class="flex md:w-1/2 flex-col">
-                    <form class="flex flex-col gap-4">
-        
-                        <div class="flex gap-4">
-                            <input type="text" placeholder="Your Name" class="w-1/2 bg-transparent border border-[#1E293B] rounded-xl px-5 py-4 text-white outline-none focus:border-[#8B5CF6]">
+                <!-- Contact Form -->
+                <div class="card-glass rounded-card p-8">
 
-                            <input type="email" placeholder="Your Email" class="w-1/2 bg-transparent border border-[#1E293B] rounded-xl px-5 py-4 text-white outline-none focus:border-[#8B5CF6]">
-                        </div>
+                    <h3 class="text-2xl font-bold text-white mb-8">
+                        Send a Message
+                    </h3>
 
-                        <input type="text" placeholder="Subject" class="bg-transparent border border-[#1E293B] rounded-xl px-5 py-4 text-white outline-none focus:border-[#8B5CF6]">
-                        
-                        <textarea placeholder="Your Message" rows="8" class="bg-transparent border border-[#1E293B] rounded-xl px-5 py-4 text-white outline-none resize-none focus:border-[#8B5CF6]"></textarea>
+                    <form class="flex flex-col gap-5">
 
-                        <button class="w-fit px-10 py-4 rounded-xl bg-gradient-to-r from-[#3883f6] to-[#8B5CF6] text-white font-semibold flex items-center gap-3">Send Message</button>
+                        <input
+                            type="text"
+                            placeholder="Your Name"
+                            class="bg-transparent border border-border-primary rounded-xl px-5 py-4 text-white outline-none focus:border-primary">
+
+                        <input
+                            type="email"
+                            placeholder="Your Email"
+                            class="bg-transparent border border-border-primary rounded-xl px-5 py-4 text-white outline-none focus:border-primary">
+
+                        <input
+                            type="text"
+                            placeholder="Subject"
+                            class="bg-transparent border border-border-primary rounded-xl px-5 py-4 text-white outline-none focus:border-primary">
+
+                        <textarea
+                            rows="6"
+                            placeholder="Your Message"
+                            class="bg-transparent border border-border-primary rounded-xl px-5 py-4 text-white outline-none resize-none focus:border-primary"></textarea>
+
+                        <button
+                            type="submit"
+                            class="w-fit px-8 py-4 rounded-button bg-gradient-to-r from-primary to-secondary text-white font-semibold hover:opacity-90 transition">
+                            Send Message
+                        </button>
 
                     </form>
+
                 </div>
+
             </div>
+
         </section>
     </main>
 
     <!-- Footer section -->
-    <footer class="px-[24px] py-[20px] flex justify-between md:flex-row w-full">
-    <!-- logo -->
-    <div class="flex gap-[5px] items-center">
-        <img class="h-6 self-center" src="./assets/icon/dev.svg" alt="dev icon">
-        <h2 class="font-semibold text-white text-base">DevPortofolio</h2>
-    </div>
+    <footer class="mt-8 py-10 text-center text-center">
 
-    <p class="text-white text-base">© 2024 Ratu Annisa Larassati. All rights reserved.</p>
+        <div class="flex justify-center mb-5">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold">
+                ✦
+            </div>
+        </div>
 
-    <nav class="flex gap-4">
-        <a class="text-white text-base hover:opacity-80" href="#">Home</a>
-        <a class="text-white text-base hover:opacity-80" href="#">About</a>
-        <a class="text-white  hover:opacity-80" href="#">Projects</a>
-        <a class="text-white hover:opacity-80" href="#">Contact</a>
-    </nav>
-</footer>
+        <h3 class="text-white text-lg font-semibold">
+            Ratu Annisa Larassati
+        </h3>
+
+        <p class="text-text-muted mt-2">
+            Software Engineering Student • SDUST
+        </p>
+
+        <div class="flex justify-center gap-6 mt-6">
+            <a href="#" class="text-text-muted hover:text-white">GitHub</a>
+            <a href="#" class="text-text-muted hover:text-white">LinkedIn</a>
+            <a href="#" class="text-text-muted hover:text-white">Instagram</a>
+        </div>
+
+        <p class="text-text-muted text-sm mt-8">
+            © 2026 All Rights Reserved.
+        </p>
+
+    </footer>
 
 </body>
 </html>
