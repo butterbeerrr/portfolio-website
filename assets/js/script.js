@@ -6,6 +6,13 @@ if (window.location.hash) {
 const mobileNav = document.getElementById("mobileNav");
 const hamburgerBtn = document.getElementById("hamburgerBtn");
 const mobileLinks = document.querySelectorAll(".mobile-link");
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", () => {
+        alert("Thank you! Your message is being sent.");
+    });
+}
 
 function toggleMenu() {
     mobileNav.classList.toggle("hidden");
