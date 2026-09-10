@@ -34,3 +34,7 @@ portfolio-website/
 ├── images/
 ├── .gitignore
 └── README.md
+
+## Git Workflow
+
+This project uses Git for version control, including branches, commits, pull requests, and releases.
